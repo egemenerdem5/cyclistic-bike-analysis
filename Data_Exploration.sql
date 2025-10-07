@@ -47,6 +47,39 @@ TIMESTAMP_DIFF(ended_at, started_at, MINUTE) >= 1440
 -- TIMESTAMP is in YYYY-MM-DD hh:mm:ss UTC format 
 
 -- 4) name & id of start_station and end_station
+SELECT DISTINCT start_station_name, COUNT(*) AS start_station_count
+FROM myfirstproject-469413.Cyclistic_bike_share.cyclistic_data
+GROUP BY start_station_name;
+-- a total of 1073951 end_station_name with null values are found 
+
+SELECT DISTINCT end_station_name, COUNT(*) AS end_station_count
+FROM myfirstproject-469413.Cyclistic_bike_share.cyclistic_data
+GROUP BY end_station_name;
+-- a total of 1104653 end_station_name with null values are found 
+
+SELECT start_station_id, end_station_id 
+FROM myfirstproject-469413.Cyclistic_bike_share.cyclistic_data
+WHERE start_station_id IS NOT NULL OR
+end_station_id IS NOT NULL;
+-- null values observed 
+-- the string lengths of station id are inconsistent. however, it will be ignored as the station id is not important in our analysis 
+
+-- 5) lat & lng of start and end
+SELECT * 
+FROM myfirstproject-469413.Cyclistic_bike_share.cyclistic_data
+WHERE 
+start_lat IS NULL OR
+start_lng IS NULL OR
+end_lat IS NULL OR
+end_lng IS NULL;
+-- 7232 null values are observed
+
+-- 6) member_casual: type of membership 
+SELECT member_casual, COUNT(*) AS membership_count
+FROM myfirstproject-469413.Cyclistic_bike_share.cyclistic_data
+GROUP BY member_casual;
+---- only two types: member and casual.
+
 
 
 
