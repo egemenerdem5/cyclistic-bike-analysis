@@ -23,3 +23,49 @@ FROM myfirstproject-469413.Cyclistic_bike_share.cyclistic_data;
 --End lng = 7232 values
 
 -- Explore data one by one from left column to right column
+
+-- 1) rider_id: the length of the rider id should be uniform 
+SELECT LENGTH(ride_id) as rider_id_length 
+FROM myfirstproject-469413.Cyclistic_bike_share.cyclistic_data
+GROUP BY LENGTH(ride_id); 
+-- the ride_id is consistent with 16 characters.
+
+-- 2) rideable_type: determine the type of bikes 
+SELECT rideable_type 
+FROM myfirstproject-469413.Cyclistic_bike_share.cyclistic_data
+GROUP BY rideable_type
+-- there are three types of bike: classic bike, electric bike, and electric scooter.
+
+-- 3) started_at, ended_at: ride duration
+SELECT ride_id, started_at, ended_at
+FROM myfirstproject-469413.Cyclistic_bike_share.cyclistic_data
+WHERE 
+TIMESTAMP_DIFF(ended_at, started_at, MINUTE) <= 1 OR
+TIMESTAMP_DIFF(ended_at, started_at, MINUTE) >= 1440
+-- check if the ride time is less than a minute or longer than a day 
+-- the end time is behind the start time
+-- TIMESTAMP is in YYYY-MM-DD hh:mm:ss UTC format 
+
+-- 4) name & id of start_station and end_station
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
