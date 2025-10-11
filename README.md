@@ -59,7 +59,50 @@ We will be using Cyclistic’s historical trip data to analyze and identify tren
     Last but not least, when we check for the sum of the hour the trips taken by members. Annual members use for short trips mostly under 10 minutes, Casual members mostly use for between 10 to 30 minutes. 
 
      
-   In conclusion, We can reach such a outcome that casual members usually take rides for leisure meanwhile annual members use these bikes for commuting their work and based on the months we can quickly state if company plans to start a campaign they should make it on       summer rather than winter. As you can see even though this superficial analysis on excel we could managed to have some vital information about this business problem and have some solution about it.
+   In conclusion, We can reach such a outcome that casual members usually take rides for leisure meanwhile annual members use these bikes for commuting their work and based on the months we can quickly state if company plans to start a campaign they should make it on summer rather than winter. As you can see even though this superficial analysis on excel we could managed to have some vital information about this business problem and have some solution about it. 
+
+ Now let's move on to the process stage with SQL, the basis for the 2024 data and the steps for processing the data are as follow: 
+ 
+ 1.[Data Combining](https://github.com/egemenerdem5/cyclistic-bike-analysis/blob/main/Data_Combining.sql) 
+ 
+ 2.[Data Exploration](https://github.com/egemenerdem5/cyclistic-bike-analysis/blob/main/Data_Exploration.sql) 
+ 
+ 3.[Data Cleaning](https://github.com/egemenerdem5/cyclistic-bike-analysis/blob/main/Data_Cleaning.sql) 
+ 
+ 4.[Data Analysis](https://github.com/egemenerdem5/cyclistic-bike-analysis/blob/main/Data_Analysis.sql) 
+
+ ### Data Combining 
+  The 12 tables from January 2024 to December 2024 were stacked and combined into a single table.The table composed of 5,860,568 rows.
+
+### Data Exploration 
+  I ran the queries for each column from left to right in order to determine the data type and to uncover any missing values, outliers, inconsistencies, and errors within the dataset.
+
+  The data set consists of **13 variables**, as shown in the following:
+  | No | Variable | Description | 
+  | :--- | :---: | :---: |
+  | 1 | ride_id | Unique ID assigned to each ride |
+  | 2 | rideable_type | classic,docked, or electric | 
+  | 3 | started_at | Date and time at the start of trip | 
+  | 4 | ended_at | Date and time the end of trip | 
+  | 5 | start_station_name | Name of the station where the ride journey started from |
+  | 6 | start_station_id	 | ID of the station where the ride journey started from |
+  | 7 | end_station_name	 | Name of the station where the ride trip ended at |
+  | 8 | end_station_id	| ID of the station where the ride trip ended at |
+  | 9 | start_lat | Latitude of starting station |
+  | 10 | start_lng | Longitude of starting station |
+  | 11 | end_lat	| Latitude of ending station |
+  | 12 | end_lng | Longitude of ending station |
+  | 13 | member_casual | Type of membership of each rider
+
+
+
+  
+
+ 
+
+ 
+
+   
 
       
    
