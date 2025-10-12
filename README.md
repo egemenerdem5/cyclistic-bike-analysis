@@ -132,6 +132,81 @@ We will be using Cyclistic’s historical trip data to analyze and identify tren
 - However, when we look at the weekly data along with the hourly data, we can see some patterns where there is a high level of bike trip activity from **4 PM — 5 PM on Tuesdays, Wednesdays, and Thursdays** for annual members and **12 PM — 3 PM on Saturdays** for casual riders.
 
 **Types of Bicycles Used** 
+Cyclistic offers a range of bicycle types — classic, electric, and docked. Looking at the data, we can identify certain patterns about annual and casual members when it comes to bicycle preference.
+- Annual members preferred **classic bikes** over electric bikes. 1.71 million trips (**65.7%**) were taken on classic bikes, compared to 0.87 million trips (**33.5%**) on electric bikes.
+- Casual riders also preferred **classic bikes** over the other two options. 0.95 million trips (**64.1%**) were taken on classic bikes, 0.51 million trips (**34.2%**) were taken on electric bikes, and less than 0.03 million trips (**1.7%**) were taken on electric scooters.
+- When looking at the specific population of annual members and casual riders, annual members preferred **classic bikes** at a greater percentage than casual riders at **65.7% versus 64.1%**, while casual riders preferred **electric bikes** at a greater percentage at **34.2% versus 33.5%**.
+
+**Trip Duration** 
+Now let’s look at how these two groups performed in terms of trip duration 
+- On average, annual members had a trip duration of **12.4 minutes**, while casual riders had a trip duration of **23.3 minutes**.
+- Annual members had the highest mean trip duration on **Sundays** at **13.8 minutes** and the lowest on **Mondays** at **11.7 minutes**.
+- Casual riders had the highest mean trip duration on **Sundays** at **27.6 minutes** and the lowest on **Tuesdays** at **20.5 minutes**.
+- Seasonally, we can see that both groups had a greater mean trip duration during warmer months compared to colder months. This is in-line with our analysis on trips taken by the months.
+
+### 5. Share - The art of visualization 
+Data visualization is the process of graphically representing our data. It is a way to engage our audience and communicate our findings to tell a story that goes beyond the numbers. It is important that we create effective visuals that allow our audience to take in all the information in an easily digestible manner and draws them to have a conversation with the data.
+
+The following visualizations highlight the differences in patterns and relationships between annual members and casual riders. 
+
+**Insights**
+
+For reference, the orange color symbolizes annual members while the blue color indicates casual riders.
+<img width="333" height="203" alt="Sheet 1" src="https://github.com/user-attachments/assets/81e51401-b848-4d15-92f2-effa2270dc2e" /> 
+
+Throughout the year, annual members made up a majority of Cyclistic’s trip activity; however, there is a considerable portion of casual riders that can increase Cyclistic’s growth opportunities if conversion is successful.
+
+
+
+
+
+<img width="1659" height="817" alt="Sheet 1 (1)" src="https://github.com/user-attachments/assets/175bc2eb-d09d-45e4-8406-379093fc8b42" />
+
+Annual members recorded the highest number of trips in September while casual members recorded the highest number of trips in July. Both groups experienced an increase in ride activity during summer months. This could be due to the recreational nature of bike riding that allows it be more suitable for warmer temperatures which also explains the decrease in trips in winter months. 
+
+
+
+
+
+<img width="637" height="817" alt="Sheet 1 (3)" src="https://github.com/user-attachments/assets/c26d301b-306e-49ca-ae77-88d2f235b898" />
+
+Although Cyclistic’s population mainly consist of annual members, it is important to note that when looking at the two user groups, a greater proportion of casual riders engaged in bike riding on the weekend compared to the weekday. Annual members could be using bikes more frequently on weekdays for work while casual riders prefer to use the service leisurely.
+
+
+<img width="1858" height="241" alt="Sheet 1 (4)" src="https://github.com/user-attachments/assets/0132bea3-9a9f-4cbc-a2e1-5caad9978ffb" /> 
+
+Classic bikes for both users seem to be more popular than the other two options. However, there was little data on both annual members and casual members using docked bikes. It might be important to dive deeper into why members are not using **docked bikes**.
+
+
+
+<img width="623" height="817" alt="Sheet 1 (5)" src="https://github.com/user-attachments/assets/2fb1435a-baf8-4b21-bb7f-d78bc5400f3d" />
+
+This area graph shows the average duration the two customer types are using the bike service based on the day of the week. Annual members are more consistent throughout the week while there is a noticeable increase in duration on Sunday and Saturday for casual riders. Overall, it seems that casual riders used the bikes for a longer time period than annual members.
+
+
+### 6. Act -  Making data-driven decisions 
+The final phase in our analysis involves applying our insights to help drive solutions and recommendations that are backed by data. Our business task was to identify how the two different customer groups use Cyclistic bikes differently in order to design effective marketing strategies that convert casual riders to annual memberships.
+
+**Recommendations** 
+
+- Introduce a **new annual membership** option that considers the uses of current casual riders. Casual riders seem to prefer using the service as a form of leisure and physical activity, especially on the weekends. The membership would include offerings tailored towards the behaviors of casual riders to encourage them to choose a Cyclistic membership plan.
+- **Group Membership Discounts**: Offerdiscounted plans for friends, students, and families can encourage collective memberships. Furthermore, it encourages users to cycle together and strengthen the bonds between people.
+- Design a **mobile app** and include **features** such as geotracking of bike locations, mobile bike unlocking, visual aids (carbon emission, total miles rode) and a loyalty rewards program with points and member-only discounts.
+- **Survey** the casual rider customer base to get an understanding of their user experience with the service so far and if there are any potential factors that are holding them back from getting an annual membership.
+- **Social Media Engagement**: Utilize digital media, including social media platforms, to engage with both casual riders and potential members. Share success stories, testimonials, and user-generated content from Cyclistic members who have benefited from the membership. Create visually appealing content showcasing the joy of cycling during different seasons and scenarios, enticing casual riders to become members.
+
+
+## 🏁 Conclusion
+In short, this analysis provides valuable insights into the preferences and behaviors of Cyclistic members and casual riders. By tailoring strategies to the identified differences and preferences, Cyclistic can effectively convert casual riders into potential members.
+
+
+
+
+
+
+
+
+
 
 
       
