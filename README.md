@@ -28,22 +28,25 @@ We will be using Cyclistic’s historical trip data to analyze and identify tren
  - Data visualization - Tableau
 
  ### 3. Process - Cleaning and manipulating the data 
- Processing data is crucial for ensuring that the dataset is clean, consistent, and free of errors, allowing us to generate accurate insights that support effective decision-making. 
+ Processing data is crucial for ensuring the dataset is clean, consistent, and free of errors. This allows us to generate accurate insights that support effective decision-making.
 
- First of all, I want to state that Since we have such a large volume of data, using SQL/BigQuery might be more efficient as we continue to process and clean our data, but nevertheless I would like to share with you some quick analysis performed on Excel Which proves that an effective analysis could be performed by asking right questions and focusing on relevant information about business task. 
+ While tools like SQL or BigQuery would be more efficient for such a large volume of data, I’d like to share a quick analysis performed in Excel. This demonstrates that effective insights can still be gained by asking the right questions and focusing on the most relevant information for the business task.
 
- 1-) First, I combined and transformed the 12 csv files on a single sheet in power query editor which based on monthly data on 2024. 
+ 1-) First, I combined and transformed the 12 monthly CSV files from 2024 into a single sheet using the Power Query Editor.
  
- 2-) Then We got 13 Column which are (ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng, and member_casual) (We will explained them more detailed after we passed the Sql). 
+ 2-) The resulting dataset contained 13 columns, including ride_id, rideable_type, started_at, ended_at, and member_casual. (A more detailed explanation of these columns will follow in the SQL section).
  
- 3-) Now, In order to get insight about how casual and annual members differentiate each other I primarily want to focus on which month, day (of the week), and hour they used these bikes and how long do they perform on single ride, so I created columns from started_at variable for each of the data variable I want to create(month,day...). Due to data redundancy I bucketed the data based on the ride length as ( Under 10 min, between 10 and 30 min , and over 60 min). Then I deleted the columns except rideable_type, member_casual, month, Day name, Hour, and Custom. Finally I grouped the rows in a column called Count.
+ 3-) To understand the differences between casual and annual members, I focused on their usage patterns by month, day of the week, hour, and ride length. I extracted new columns for month, day, and hour from the started_at variable.
 
+ 4-) To simplify the analysis of ride length, I grouped the data into three distinct buckets: Under 10 minutes, Between 10 and 30 minutes, and Over 60 minutes.
+
+ 5-) Finally, I removed redundant columns, keeping only rideable_type, member_casual, month, Day name, Hour, and Custom (for ride length), before grouping the rows to create a Count column for each unique combination.
 
 
 
   <img width="1165" height="991" alt="Ekran görüntüsü 2025-10-01 142600" src="https://github.com/user-attachments/assets/9a27f395-deaf-4626-a15a-24566c5260a6" />
 
- 4-) After that cleaning process I execute some visualizations by using pivot charts down below.
+ 6-) After that cleaning process I execute some visualizations by using pivot charts down below.
  
  <img width="2457" height="1664" alt="Picture3" src="https://github.com/user-attachments/assets/d4e942ea-8506-4ce5-a2d1-01565b2db8be" />
  <img width="2756" height="1664" alt="Picture4" src="https://github.com/user-attachments/assets/08bf6d42-244f-485f-89ea-73c92a151b30" /> 
@@ -51,15 +54,21 @@ We will be using Cyclistic’s historical trip data to analyze and identify tren
  <img width="3048" height="1770" alt="Picture6" src="https://github.com/user-attachments/assets/c5279e76-ea49-42c0-9912-c7908fcadb51" />
 
 
- 5-) We can reach some beneficial outcomes based on these visuals,
+ 7-) Based on the visuals, we can draw several key conclusions about user behavior.
  
-    First as we can see it's obvious that members usually prefer to ride on summer months and they least prefer to ride on winter months especially on january.
-    Secondly casual members usually prefer to ride on weekend in contrast annual members ride more on week days.
-    On the third graph we notice that annual members mostly take a ride between 7 pm and 17 pm meanwhile casual members take ride between 12-18 pm with mostly equally distributed. 
-    Last but not least, when we check for the sum of the hour the trips taken by members. Annual members use for short trips mostly under 10 minutes, Casual members mostly use for between 10 to 30 minutes. 
+    First, ridership is clearly seasonal, with both member types preferring to ride during the summer months and showing the least activity in winter, especially in January.
+    Second, a clear difference emerges in weekly usage: casual members tend to ride more on weekends, while annual members ride more frequently on weekdays.
+    Third, an hourly analysis reveals that annual members' rides are concentrated between 7 AM and 5 PM, whereas casual members' rides are more evenly distributed throughout the day, with a peak between 12 PM and 6 PM.
+    Finally, when we examine trip duration, we find that annual members primarily take short trips, typically under 10 minutes, while casual members most often take trips lasting between 10 and 30 minutes.
 
      
-   In conclusion, We can reach such a outcome that casual members usually take rides for leisure meanwhile annual members use these bikes for commuting their work and based on the months we can quickly state if company plans to start a campaign they should make it on summer rather than winter. As you can see even though this superficial analysis on excel we could managed to have some vital information about this business problem and have some solution about it. 
+This analysis leads to two key conclusions:
+
+1-) Casual members appear to use the service for leisure, while annual members use the bikes for commuting.
+
+2-) The company should focus any new campaigns on the summer months, as this is when ridership is at its peak.
+
+Despite being a preliminary analysis performed in Excel, we were able to extract crucial insights and offer actionable business solutions.
 
  Now let's move on to the process stage with SQL, the basis for the 2024 data and the steps for processing the data are as follow: 
  
