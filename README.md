@@ -78,28 +78,48 @@ We will be using Cyclistic’s historical trip data to analyze and identify tren
   I ran the queries for each column from left to right in order to determine the data type and to uncover any missing values, outliers, inconsistencies, and errors within the dataset.
 
   The data set consists of **13 variables**, as shown in the following:
-  | No | Variable | Description | 
-  | :--- | :---: | :---: |
-  | 1 | ride_id | Unique ID assigned to each ride |
-  | 2 | rideable_type | classic,docked, or electric | 
-  | 3 | started_at | Date and time at the start of trip | 
-  | 4 | ended_at | Date and time the end of trip | 
-  | 5 | start_station_name | Name of the station where the ride journey started from |
-  | 6 | start_station_id	 | ID of the station where the ride journey started from |
-  | 7 | end_station_name	 | Name of the station where the ride trip ended at |
-  | 8 | end_station_id	| ID of the station where the ride trip ended at |
-  | 9 | start_lat | Latitude of starting station |
-  | 10 | start_lng | Longitude of starting station |
-  | 11 | end_lat	| Latitude of ending station |
-  | 12 | end_lng | Longitude of ending station |
-  | 13 | member_casual | Type of membership of each rider
+  | No | Variable | Description | Type |
+  | :--- | :---: | :---: | :---: |
+  | 1 | ride_id | Unique ID assigned to each ride | STRING |
+  | 2 | rideable_type | classic, docked, or electric | STRING | 
+  | 3 | started_at | Date and time at the start of trip | TIMESTAMP |
+  | 4 | ended_at | Date and time the end of trip | TIMESTAMP |
+  | 5 | start_station_name | Name of the station where the ride journey started from | STRING |
+  | 6 | start_station_id	 | ID of the station where the ride journey started from | STRING |
+  | 7 | end_station_name	 | Name of the station where the ride trip ended at | STRING |
+  | 8 | end_station_id	| ID of the station where the ride trip ended at | STRING |
+  | 9 | start_lat | Latitude of starting station | FLOAT |
+  | 10 | start_lng | Longitude of starting station | FLOAT |
+  | 11 | end_lat	| Latitude of ending station | FLOAT |
+  | 12 | end_lng | Longitude of ending station | FLOAT |
+  | 13 | member_casual | Type of membership of each rider | STRING |
 
+### Data Cleaning 
+  Before analyzing the data,the dataset was cleaned by: 
+  - Removing the trips with **null values**.
+  - Adding 3 columns: **'ride_length_in_mins', 'day_of_week'** and **'month'**.
+  - Exclusing the **rides with duration less than a minute** or **longer than a day**.
 
+  In total, 4,095,232 rows were returned, which means **1,765,336 rows were removed**. 
 
-  
+ ### 4. Analyze - Identifying the patterns 
+  In order to get a better understanding from our data, it is important to identify how our data can help us determine the patterns between annual and casual members in their bike usage.
+  - **Total trips taken** 
+  - **Types of bicycles used**
+  - **The length and location of bike trips**
 
- 
+  We will start by looking at the total trips taken by Cyclistic bike users. When we run our query, we can see that:      
+   **62.67%** of bikes users are annual members while **37.33%** of bikes users are casual riders.
 
+  We can further explore the data by looking at the specific instances in which these trips were taken (e.g., hour, day of the week, month, year). For this analysis, we will only be focusing on the first three variables as we only have a year’s worth of data.
+
+ **Trips Taken by the Month**
+ Specifically looking at the monthly data, we can see that: 
+ - Annual members recorded the highest number of bike trips in **September 2024**, with 312,879 trips (**7.492%**), and the lowest in **January 2024**, with 90,781 trips (**2.192%**).
+ - Casual riders recorded the highest number of bike trips in **July 2024**, with 227,684 trips (**5.753%**), and the lowest in **January 2024**, with 17,108 trips (**0.435%**).
+ - Both types of users recorded a higher number of trips in summer months (**21.03%** for annual members and **16.512%** for casual riders) and a lower number of trips in winter months (**8,05%** for annual members and **2.061%** for casual riders).
+
+ **Trips Taken by the Day of the Week** 
  
 
    
