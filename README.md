@@ -120,9 +120,19 @@ We will be using Cyclistic’s historical trip data to analyze and identify tren
  - Both types of users recorded a higher number of trips in summer months (**21.03%** for annual members and **16.512%** for casual riders) and a lower number of trips in winter months (**8,05%** for annual members and **2.061%** for casual riders).
 
  **Trips Taken by the Day of the Week** 
- 
+ When we look at the weekly data, we can observe that: 
+ - Annual members used the bike-share program more frequently on **Wednesdays** at 433,388 trips (**10.788%**) and the least on **Sundays** at 286,684 trips (**6.594%**).
+ - Casual riders used the bike-share program more frequently on **Saturdays** at 310,841 trips (**7.776%**) and the least on **Tuesdays** at 159,552 trips (**3.832%**).
+ - Both customer types used the service more frequently on weekdays (Mon-Fri), but as a whole, casual riders had a higher usage rate on **weekends** (Sat-Sun) at **38.35%** compared to annual members at **23.40%**.
 
-   
+**Trips Taken by the Hour** 
+ If we look at the daily trips, we can determine that:
+- Annual members used Cyclistic bikes more frequently at **5 PM** at 286,406 trips (**10.99%**), and the least at **3 AM** at 4,020 trips (**0.15%**).
+- Casual member used Cyclistic bikes more frequently at **5 PM** at 143,904 trips (**9.66%**), and the least at **4 AM** at 3,593 trips (**0.24%**).
+- However, when we look at the weekly data along with the hourly data, we can see some patterns where there is a high level of bike trip activity from **4 PM — 5 PM on Tuesdays, Wednesdays, and Thursdays** for annual members and **12 PM — 3 PM on Saturdays** for casual riders.
+
+**Types of Bicycles Used** 
+
 
       
    
